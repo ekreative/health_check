@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function health_check_menu() {
+  $items = [];
+
+  $items['healthcheck'] = [
+    'page callback' => 'health_check_content',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  ];
+
+  return $items;
+}
+
+function health_check_content() {
+  drupal_json_output(
+    [
+      'app' => TRUE,
+      'database' => TRUE,
+      'version' => VERSION,
+      'framework' => 'Drupal',
+    ]
+  );
+}

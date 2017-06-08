@@ -1,0 +1,6 @@
+name = Health check
+description = Allows admins to check site health.
+package = Performance
+core = 7.x
+core = "7.x"
+version = "1.0.0"
