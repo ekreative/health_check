@@ -21,7 +21,7 @@ function health_check_content() {
       'app' => TRUE,
       'database' => TRUE,
       'version' => VERSION,
-      'framework' => 'Drupal',
+      'framework' => 'drupal7',
     ]
   );
 }
